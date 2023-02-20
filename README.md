@@ -3,6 +3,19 @@
 
 > Open this page at [https://lgrachov.github.io/purchasetest/](https://lgrachov.github.io/purchasetest/)
 
+## How purchase works?
+
+```ts
+info.setScore(3000)
+function purchase() {
+    game.showLongText("Press (A) to buy 'Shark Weapon', your balance after that will be 1K", DialogLayout.Bottom)
+    game.showLongText("Press (A) to confirm that you are buying 'Shark Weapon'", DialogLayout.Bottom)
+    info.changeScoreBy(-2000)
+}
+controller.A.onEvent(ControllerButtonEvent.Pressed, function() {
+    purchase()
+})
+```
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
